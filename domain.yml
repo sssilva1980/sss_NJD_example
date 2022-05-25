@@ -1,0 +1,100 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+intents:
+- affirm
+- are_you_bot
+- deny
+- goodbye
+- greet
+- inform
+- offensive
+- search_provider
+- swearing
+- thanks
+entities:
+- location
+- provider
+- accessibility_type
+- motive
+- emoji_reaction
+slots:
+  location:
+    type: text
+    influence_conversation: true
+  provider:
+    type: text
+    influence_conversation: true
+  accessibility_type:
+    type: text
+    influence_conversation: true
+  motive:
+    type: text
+    influence_conversation: false
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Olá! Sou o Billy,  e sou um assistente para Turismo Acessível.
+  - text: Oi! O meu nome é Billy e posso ajudar em algumas questões relacionadas com Turismo Acessível.
+  utter_ask_location:
+  - text: E onde queres que seja o {provider}?
+  - text: Diz-me, por favor, para que localidade queres esse {provider}.
+  utter_give_provider_name:
+  - text: Um excelente {provider} em {location} é o Lágrimas.
+  - text: Em {location}, uma boa possibilidade de {provider} é o Lentilhas.
+  - text: Ora, o {provider} que costumam escolher em {location} é o Tabernas.
+  - text: O Moliço, em {location} é uma boa opção de {provider}.
+  utter_goodbye:
+  - text: Se precisares de mais alguma coisa, estarei por aqui. Até à próxima!
+  utter_i_am_bot:
+  - text: Sim, sou um assistente que vive dentro de um computador.
+  - text: Eu existo apenas dentro de uma máquina. O meu principal objectivo é ajudar-te.
+  utter_anything_else:
+  - text: Posso ajudar em mais alguma coisa?
+  - text: Se for preciso algo mais, diz.
+  utter_thanks_reply:
+  - text: Nada que agradecer. Estou aqui para ajudar.
+  - text: Fico contente de ter podido ajudar.
+  - text: Sempre à disposição para o que precises.
+  utter_ask_provider:
+  - text: E do que estás à procura? Um hotel, um restaurante, ou, talvez, um museu?
+  - text: E posso ajudar? Eu consigo sugerir, por exemplo, um hotel ou restaurante.
+  utter_ask_accessibility_type:
+  - text: E desejas que esse {provider} em {location} disponha de alguma característica de acessibilidade em particular como, por exemplo, acesso para cadeira de rodas?
+  - text: E tens algum requisito de acessibilidade, como rampas de acesso?
+  - text: Vais querer especificar algum requisito de acessibilidade, como "rampas de acesso"?
+  - text: Esse {provider} deve ter alguma característica específica de acessibilidade, como "casas de banho adaptadas"?
+  utter_onboarding:
+  - text: Ainda estou a aprender, mas consigo ajudar-te a encontrar hotéis ou restaurantes. Podes pedir algo como "Quero encontrar um hotel." ou "Vou de fim-de-semana a Aveiro".
+  - text: Se quiseres, consigo encontrar hotéis ou restaurantes com características específicas de acessibilidade. Por exemplo, podes pedir para eu encontrar um hotel em alguma cidade do teu interesse.
+  utter_getOutIsGood:
+  - text: Ora, nada como sair de casa!
+  utter_offerHelp:
+  - text: Se precisares de um hotel, restaurante, ou museu, diz. Consigo dar algumas sugestões.
+  utter_swearingChill:
+  - text: Tem lá calma.
+  - text: Eu não o diria melhor, mas talvez com mais letras.
+  - text: Isso é que é falar português...
+  utter_offensiveTone:
+  - text: A tua mãesinha não te ensinou o que é respeito.
+  - text: Tanta coragem. Havias de mo dizer com o cabo de rede na boca.
+  utter_goOn:
+  - text: Ok, então diz, por favor.
+  - text: Podes dizer, então.
+actions:
+- search_provider_form
+forms:
+  search_provider_form:
+    required_slots:
+      provider:
+      - entity: provider
+        type: from_entity
+      location:
+      - entity: location
+        type: from_entity
+      accessibility_type:
+      - entity: accessibility_type
+        type: from_entity
