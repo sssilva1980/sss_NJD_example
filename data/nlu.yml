@@ -1,0 +1,208 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Olá
+    - Oi
+    - Bom dia
+    - Boa tarde
+    - Boas!
+    - Hey
+    - Olá, boa noite!
+    - Oi!
+    - Hey!
+    - Ois
+    - Olá!
+    - Oi, amor!
+    - Olá. boa noite!
+    - Olha
+    - Olá, meu caro!
+    - ois
+    - oi
+    - Hey Billy
+    - Olá Billy
+    - Olá billy
+    - olá, Billy
+    - olá Billy
+- intent: search_provider
+  examples: |
+    - Gostava de saber de um [hotel](provider)
+    - Preciso de saber de um [hotel](provider) em [Aveiro](location)
+    - Será que me arranjas um [hotel](provider)?
+    - Preciso de um [hotel](provider)
+    - Gostaria de saber de um [hotel](provider) jeitoso!
+    - Quero um bom [restaurante](provider) para ir jantar
+    - Sim, quero encontrar um [hotel](provider), por favor
+    - Sim, quero um [hotel](provider)
+    - Será que me arranjas um [hotel](provider), por favor?
+    - Podes. Estou a precisar de um [hotel](provider) dos bons!
+    - Sim, preciso mesmo de um [hotel](provider)
+    - Precisa de saber de um [hotel](provider), se faz favor
+    - Preciso de um [restaurante](provider)
+    - Agora precisava de um [hotel](provider)
+    - Em [Coimbra](location), se houver algum bom
+    - Olha, preciso mesmo de encontrar um [hotel](provider)
+    - Preciso de saber de um [restaurante](provider) janota
+    - Precisava de um [hotel](provider) no [Porto](location), sabes de algum?
+    - E se for um [restaurante](provider) barato?
+    - Preciso de mais um [hotel](provider)
+    - E um [hotel](provider) para [Coimbra](location)?
+    - Gostava de saber de um [hotel](provider) no [Porto](location)
+    - Sim, preciso de um [hotel](provider)
+    - Sim, gostava de encontrar um [restaurante](provider) daqueles bem giros
+    - quero um [hotel](provider) que tenha acesso para [cadeira de rodas ](accessibility_type)em [Aveiro](location)
+    - PReciso de um [restaurante](provider)
+    - PReciso de um [hotel](provider)
+    - E se fosse um [restaurante](provider)?
+    - Olha, precisava de [hotel](provider) em [Aveiro](location)
+    - Quero saber de um [hotel](provider)
+    - Passa para cá um [hotel](provider)!
+    - um [restaurante](provider)
+    - precisava também de um [restaurante](provider)
+    - quero conhecer [restaurantes](provider)
+    - quero reservar um [hotel](provider)
+    - Preciso encontrar um local para dormir.
+    - Vou precisar de um [hotel](provider) em [aveiro](location)
+    - [Restaurante](provider), obviamente! Comida!
+    - Olha, consegues sugerir um [local para deitar a cabeça?](provider)
+    - Estou à procura de um [sítio para descansar, ](provider)depois
+    - Preciso de um [sítio para dormir](provider)
+    - sim, um [hotel](provider)
+    - Preciso de um quarto em Aveiro
+    - sim, gostava de encontrar um bom [hotel](provider)
+- intent: inform
+  examples: |
+    - Sim, [cadeira de rodas](accessibility_type)
+    - Em [Aveiro](location)
+    - Pode ser no [Porto](location), por favor.
+    - Pode ser no [Porto](location)
+    - Para [Aveiro](location)
+    - Quero para [Lisboa](location), por favor.
+    - Se pudesse ser no centro de [Aveiro](location) era óptimo
+    - Para [Leiria](location), se fizeres favor
+    - Pode ser para [Leiria](location)?
+    - O ideal era ser aqui mesmo em [Aveiro](location)
+    - Para [Coimbra](location)
+    - Na [Figueira da Foz](location)
+    - No centro de [Aveiro](location), por favor
+    - Para [Coimbra](location), se fizeres favor
+    - No próximo fim-de-semana, apetece-me ir passear até [Aveiro](location)
+    - Olha, preciso de algo para [Aveiro](location)
+    - Para o [Porto](location)
+    - Preciso que tenha acesso para [cadeira de rodas](accessibility_type)
+    - É importante que tenha [rampas de acesso](accessibility_type)
+    - Vou de fim de semana ao [Porto](location) :D
+    - E se fosse para [Coimbra](location)?
+    - Sim, acesso para [cadeira de rodas, ](accessibility_type)por favor
+    - Na próxima semana vou a [Aveiro](location)
+    - Este fim de semana vou a [Aveiro](location)
+    - Gostava que fosse em [Aveiro](location), por favor
+    - Sim, acesso para [cadeira de rodas](accessibility_type)
+    - Claro, preciso de ir de fim de semana a [Aveiro](location)
+    - Em [Aveiro](location), por favor
+    - Preciso de ir amanhã para o [Porto](location)
+    - Vou de fim-de-semana a [Braga](location)
+    - Sim, que tenha [rampas de acesso](accessibility_type)
+    - Estava mesmo a precisar de ir de [fim-de-semana](motive)
+    - sim, acesso para [cadeira de rodas](accessibility_type)
+    - Para a semana tenho de sair em [trabalho](motive)
+    - Sim, [rampas de acesso, ](accessibility_type)por favor
+    - Olha, amanhã tenho de sair em [trabalho](motive)
+    - Amanhã tenho de ir ao [Porto](location) em [trabalho](motive)
+    - acesso para [cadeira de rodas, ](accessibility_type)por favor
+    - quero ir para [lisboa](location)
+    - Na póxima semana preciso mesmo de ir [espairecer](motive)
+    - Olha, apetece-me ir [passear](motive)
+    - O ideal era ser em [Aveiro](location). Fica mais central
+    - Sim, quero fugir, no [fim de semana](motive)
+    - Pode ser com [cadeira de rodas ](accessibility_type)então :[sweat_smile:](emoji_reaction)
+    - [rampas de acesso](accessibility_type)
+    - preciso de [rampas de acesso](accessibility_type)
+    - Sim, estou mesmo a precisar de fugir um [fim-de-semana](motive)
+    - Ora, talvez para o [Porto](location)
+    - e para [beber cerveja ](motive)na [Figueira](location)?
+    - Quero ir para [Aveiro](location)
+- intent: thanks
+  examples: |
+    - Obrigado e até logo.
+    - Boa! Muito agradecido
+    - Excelente. Grato.
+    - Maravilha, Obrigado
+    - Ora, era exactamente isso que eu queria. Obrigadinho
+    - Eia! Obrigado!
+    - É mesmo isso. Obrigado
+    - Grato por tudo
+    - Obrigado
+    - obgd
+    - Deus te pague.
+- intent: goodbye
+  examples: |
+    - Adeus
+    - xau xau
+    - Até logo
+    - Até logo.
+    - xau
+    - [museu](provider)
+- intent: are_you_bot
+  examples: |
+    - És um robot?
+    - Estou a falar com um computador?
+    - Tu existes?
+    - Ès uma pessoa?
+    - Ès um robot, claro
+    - tu és um computador?
+    - és um bot?
+    - és vivo?
+- intent: deny
+  examples: |
+    - Não
+    - Não é preciso
+    - Obrigado. Não.
+    - Não, obrigado
+    - não
+    - nao
+- intent: swearing
+  examples: |
+    - oh merda!
+    - foda-se lá para isto
+    - oh caralho
+    - oh que caralho :(!
+    - foda-se
+    - fodasse, e só um resultado?
+- intent: offensive
+  examples: |
+    - Vai à merda!
+    - Vai-te foder
+    - cabrão de merda
+    - ide para o caralho
+    - és mesmo cona
+    - Conas!
+    - Vai à merda
+    - Cona
+    - filho da puta
+    - conas de merda
+    - vai para o caralho
+- intent: affirm
+  examples: |
+    - Sim
+    - claro
+    - pois
+    - evidentemente
+    - si
+    - sim
+    - OK
+    - certo!
+    - Afirmativo
+    - sim, sim
+    - afirmativo
+- synonym: hotel
+  examples: |
+    - local para domir
+    - local para deitar a cabeça
+    - sítio para descansar
+    - quarto para descansar
+    - quarto
+- synonym: restaurante
+  examples: |
+    - beber uma cerveja
+    - beber cerveja
