@@ -24,6 +24,7 @@ nlu:
     - Olá billy
     - olá, Billy
     - olá Billy
+    - Olá, Billy
 - intent: search_provider
   examples: |
     - Gostava de saber de um [hotel](provider)
@@ -70,6 +71,8 @@ nlu:
     - sim, um [hotel](provider)
     - Preciso de um quarto em Aveiro
     - sim, gostava de encontrar um bom [hotel](provider)
+    - Sim, o ideal era encontrar um bom [hotel](provider)
+    - queria um [hotel](provider)
 - intent: inform
   examples: |
     - Sim, [cadeira de rodas](accessibility_type)
@@ -122,6 +125,8 @@ nlu:
     - Ora, talvez para o [Porto](location)
     - e para [beber cerveja ](motive)na [Figueira](location)?
     - Quero ir para [Aveiro](location)
+    - Apetecia-me mesmo ir de [fim-de-semana](motive)
+    - Preciso mesmo de ir [descansar](motive), para a semana.
 - intent: thanks
   examples: |
     - Obrigado e até logo.

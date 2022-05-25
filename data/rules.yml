@@ -8,6 +8,7 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_onboarding
 - rule: goodbye
   steps:
   - intent: goodbye
