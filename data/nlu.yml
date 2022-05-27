@@ -213,6 +213,9 @@ nlu:
 - intent: you_fail
   examples: |
     - estás todo lixado, pá
+    - Não sabes fazer nada.
+    - Não serves para nada
+    - Que porcaria de resposta
 - synonym: hotel
   examples: |
     - local para domir

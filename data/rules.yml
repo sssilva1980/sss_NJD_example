@@ -70,3 +70,7 @@ rules:
   steps:
   - action: action_session_start
   - action: utter_onboarding
+- rule: You fail
+  steps:
+  - intent: you_fail
+  - action: utter_i_fail

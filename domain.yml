@@ -54,7 +54,7 @@ responses:
   - text: Sim, sou um assistente que vive dentro de um computador.
   - text: Eu existo apenas dentro de uma máquina. O meu principal objectivo é ajudar-te.
   utter_anything_else:
-  - text: Posso ajudar em mais alguma coisa?
+  - text: Se puser ajudar em mais alguma coisa, é só dizeres.
   - text: Se for preciso algo mais, diz.
   utter_thanks_reply:
   - text: Nada que agradecer. Estou aqui para ajudar.
@@ -85,6 +85,10 @@ responses:
   utter_goOn:
   - text: Ok, então diz, por favor.
   - text: Podes dizer, então.
+  utter_i_fail:
+  - text: Sim, peço desculpa. Ainda estou a tirar a carta de assistente conversacional. Espero melhorar com a prática. Por favor, tem paciência.
+  - text: Hmm, é verdade. Talvez seja por isso que ninguém quer falar comigo. Mas isso ajuda-me tanto a aprender.
+  - text: Ora, claro que tens razão! Peço desculpa.
 actions:
 - search_provider_foro
 forms:
