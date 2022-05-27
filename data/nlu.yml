@@ -67,7 +67,7 @@ nlu:
     - Vou precisar de um [hotel](provider) em [aveiro](location)
     - [Restaurante](provider), obviamente! Comida!
     - Olha, consegues sugerir um [local para deitar a cabeça?](provider)
-    - Estou à procura de um [sítio para descansar, ](provider)depois
+    - Estou à procura de um [sítio para descansar](provider), depois
     - Preciso de um [sítio para dormir](provider)
     - sim, um [hotel](provider)
     - Preciso de um quarto em Aveiro
@@ -89,7 +89,7 @@ nlu:
     - Para [Leiria](location), se fizeres favor
     - Pode ser para [Leiria](location)?
     - O ideal era ser aqui mesmo em [Aveiro](location)
-    - Para [Coimbra](location)
+    - Para [Gaia](location)
     - Na [Figueira da Foz](location)
     - No centro de [Aveiro](location), por favor
     - Para [Coimbra](location), se fizeres favor
