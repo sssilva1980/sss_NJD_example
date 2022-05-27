@@ -13,6 +13,7 @@ intents:
 - search_provider
 - swearing
 - thanks
+- you_fail
 entities:
 - location
 - provider
@@ -85,7 +86,7 @@ responses:
   - text: Ok, então diz, por favor.
   - text: Podes dizer, então.
 actions:
-- search_provider_form
+- search_provider_foro
 forms:
   search_provider_form:
     required_slots:

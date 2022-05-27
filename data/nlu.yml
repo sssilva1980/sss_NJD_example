@@ -25,6 +25,7 @@ nlu:
     - olá, Billy
     - olá Billy
     - Olá, Billy
+    - Ei!
 - intent: search_provider
   examples: |
     - Gostava de saber de um [hotel](provider)
@@ -73,6 +74,9 @@ nlu:
     - sim, gostava de encontrar um bom [hotel](provider)
     - Sim, o ideal era encontrar um bom [hotel](provider)
     - queria um [hotel](provider)
+    - Precisava mesmo de um [hotel](provider), por favor.
+    - Sim, adorava encontrar um bom [hotel](provider) para ficar
+    - Sim, preciso de um [restaurante](provider), também
 - intent: inform
   examples: |
     - Sim, [cadeira de rodas](accessibility_type)
@@ -127,6 +131,12 @@ nlu:
     - Quero ir para [Aveiro](location)
     - Apetecia-me mesmo ir de [fim-de-semana](motive)
     - Preciso mesmo de ir [descansar](motive), para a semana.
+    - Quero ir passar uns dias [fora](accessibility_type).
+    - Adorava ir de [fim-de-semana](motive)
+    - Gostava de ir para o [Porto](location)
+    - Estou a pensar ir de [férias](motive), para a semana
+    - Para [Aveiro](location), por favor.
+    - Eu precisava mesmo de ir de [férias](motive)
 - intent: thanks
   examples: |
     - Obrigado e até logo.
@@ -200,6 +210,9 @@ nlu:
     - Afirmativo
     - sim, sim
     - afirmativo
+- intent: you_fail
+  examples: |
+    - estás todo lixado, pá
 - synonym: hotel
   examples: |
     - local para domir

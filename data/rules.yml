@@ -56,3 +56,13 @@ rules:
   - action: utter_goOn
   - action: search_provider_form
   - active_loop: search_provider_form
+- rule: search provider form + accessibility + deny
+  condition:
+  - active_loop: search_provider_form
+  steps:
+  - action: utter_ask_accessibility_type
+  - intent: deny
+  - slot_was_set:
+    - accessibility_type: nenhuma restrição de acessibilidade
+  - action: search_provider_form
+  - active_loop: search_provider_form

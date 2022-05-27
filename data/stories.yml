@@ -27,3 +27,43 @@ stories:
     - motive: fim-de-semana
   - action: utter_getOutIsGood
   - action: utter_offerHelp
+- story: deny accessibility limitations
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_onboarding
+  - intent: inform
+    entities:
+    - motive: férias
+  - slot_was_set:
+    - motive: férias
+  - action: utter_getOutIsGood
+  - action: utter_offerHelp
+  - intent: search_provider
+    entities:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - requested_slot: location
+  - slot_was_set:
+    - location: Lisboa
+  - slot_was_set:
+    - requested_slot: accessibility_type
+  - intent: deny
+  - slot_was_set:
+    - motive: férias
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - location: Lisboa
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_give_provider_name
+  - action: utter_offerHelp
