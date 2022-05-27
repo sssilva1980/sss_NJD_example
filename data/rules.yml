@@ -67,7 +67,6 @@ rules:
   - action: search_provider_form
   - active_loop: search_provider_form
 - rule: onstart onboarding
-  condition:
-  - action: action_session_start
   steps:
+  - action: action_session_start
   - action: utter_onboarding
