@@ -52,7 +52,7 @@ nlu:
     - Gostava de saber de um [hotel](provider) no [Porto](location)
     - Sim, preciso de um [hotel](provider)
     - Sim, gostava de encontrar um [restaurante](provider) daqueles bem giros
-    - quero um [hotel](provider) que tenha acesso para [cadeira de rodas ](accessibility_type)em [Aveiro](location)
+    - quero um [hotel](provider) que tenha acesso para [cadeira de rodas](accessibility_type) em [Aveiro](location)
     - PReciso de um [restaurante](provider)
     - PReciso de um [hotel](provider)
     - E se fosse um [restaurante](provider)?
@@ -100,7 +100,7 @@ nlu:
     - É importante que tenha [rampas de acesso](accessibility_type)
     - Vou de fim de semana ao [Porto](location) :D
     - E se fosse para [Coimbra](location)?
-    - Sim, acesso para [cadeira de rodas, ](accessibility_type)por favor
+    - Sim, acesso para [cadeira de rodas](accessibility_type), por favor
     - Na próxima semana vou a [Aveiro](location)
     - Este fim de semana vou a [Aveiro](location)
     - Gostava que fosse em [Aveiro](location), por favor
@@ -116,18 +116,18 @@ nlu:
     - Sim, [rampas de acesso, ](accessibility_type)por favor
     - Olha, amanhã tenho de sair em [trabalho](motive)
     - Amanhã tenho de ir ao [Porto](location) em [trabalho](motive)
-    - acesso para [cadeira de rodas, ](accessibility_type)por favor
+    - acesso para [cadeira de rodas](accessibility_type), por favor
     - quero ir para [lisboa](location)
     - Na póxima semana preciso mesmo de ir [espairecer](motive)
     - Olha, apetece-me ir [passear](motive)
     - O ideal era ser em [Aveiro](location). Fica mais central
     - Sim, quero fugir, no [fim de semana](motive)
-    - Pode ser com [cadeira de rodas ](accessibility_type)então :[sweat_smile:](emoji_reaction)
+    - Pode ser com [cadeira de rodas](accessibility_type) então :[sweat_smile:](emoji_reaction)
     - [rampas de acesso](accessibility_type)
     - preciso de [rampas de acesso](accessibility_type)
     - Sim, estou mesmo a precisar de fugir um [fim-de-semana](motive)
     - Ora, talvez para o [Porto](location)
-    - e para [beber cerveja ](motive)na [Figueira](location)?
+    - e para [beber cerveja](motive) na [Figueira](location)?
     - Quero ir para [Aveiro](location)
     - Apetecia-me mesmo ir de [fim-de-semana](motive)
     - Preciso mesmo de ir [descansar](motive), para a semana.
