@@ -66,3 +66,8 @@ rules:
     - accessibility_type: nenhuma restrição de acessibilidade
   - action: search_provider_form
   - active_loop: search_provider_form
+- rule: onstart onboarding
+  condition:
+  - action: action_session_start
+  steps:
+  - action: utter_onboarding
