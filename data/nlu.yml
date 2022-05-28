@@ -293,7 +293,7 @@ nlu:
     - E tem acesso para [cadeira de rodas](accessibility_type)?
     - Então e tem acesso para [cadeira de rodas](accessibility_type), também?
     - E ao menos sabes o [horário](time_related) de funcionamento?
-    - Ao menos sabes se tem rampas de acesso?
+    - Ao menos sabes se tem [rampas de acesso?](accessibility_type)
 - intent: request_directions
   examples: |
     - Como faço para [chegar](direction_type) lá?
