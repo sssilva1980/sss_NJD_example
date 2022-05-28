@@ -10,6 +10,8 @@ intents:
 - greet
 - inform
 - offensive
+- request_details
+- request_directions
 - search_provider
 - swearing
 - thanks
@@ -20,6 +22,13 @@ entities:
 - accessibility_type
 - motive
 - emoji_reaction
+- swear_word
+- negative_qualifier
+- negativeQualifier
+- personal_trait
+- comida
+- time_related
+- direction_type
 slots:
   location:
     type: text
@@ -60,6 +69,9 @@ responses:
   - text: Nada que agradecer. Estou aqui para ajudar.
   - text: Fico contente de ter podido ajudar.
   - text: Sempre à disposição para o que precises.
+  - text: Quando precises, já sabes onde me encontrar!
+  - text: Volta sempre que precises.
+  - text: Foi óptimo teres passado por aqui.
   utter_ask_provider:
   - text: E do que estás à procura? Um hotel, um restaurante, ou, talvez, um museu?
   - text: E posso ajudar? Eu consigo sugerir, por exemplo, um hotel ou restaurante.
@@ -75,6 +87,7 @@ responses:
   - text: Ora, nada como sair de casa!
   utter_offerHelp:
   - text: Se precisares de um hotel, restaurante, ou museu, diz. Consigo dar algumas sugestões.
+  - text: Ainda não consigo dizer muitas coisas, mas posso dar-te sugestões de hotéis, restaurantes ou museus.
   utter_swearingChill:
   - text: Tem lá calma.
   - text: Eu não o diria melhor, mas talvez com mais letras.
@@ -82,6 +95,7 @@ responses:
   utter_offensiveTone:
   - text: A tua mãesinha não te ensinou o que é respeito.
   - text: Tanta coragem. Havias de mo dizer com o cabo de rede na boca.
+  - text: Desilude-me que fales comigo nesse tom.
   utter_goOn:
   - text: Ok, então diz, por favor.
   - text: Podes dizer, então.
@@ -89,8 +103,14 @@ responses:
   - text: Sim, peço desculpa. Ainda estou a tirar a carta de assistente conversacional. Espero melhorar com a prática. Por favor, tem paciência.
   - text: Hmm, é verdade. Talvez seja por isso que ninguém quer falar comigo. Mas isso ajuda-me tanto a aprender.
   - text: Ora, claro que tens razão! Peço desculpa.
+  utter_give_directions:
+  - text: Desculpa, mas ainda não consigo ajudar com indicações de como chegar até aos locais que sugiro.
+  - text: Portanto, o ideal é saires naquela direção virando onde devas.
+  - text: Eu ainda não sou capaz de explicar como chegar a lugares. Sou muito desorientado. Mas se pesquisares no Google encontras facilmente.
+  - text: Não sei responder, peço desculpa.
 actions:
 - search_provider_foro
+- utter_give_directions
 forms:
   search_provider_form:
     required_slots:

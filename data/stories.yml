@@ -67,3 +67,44 @@ stories:
     - requested_slot: null
   - action: utter_give_provider_name
   - action: utter_offerHelp
+- story: Story from Conversation ID 41b40302e3ee45c0b55f2c14b1a2a216
+  steps:
+  - slot_was_set:
+    - motive: férias
+  - slot_was_set:
+    - provider: hotel
+  - intent: offensive
+  - action: utter_i_fail
+  - intent: greet
+  - action: utter_greet
+  - action: utter_onboarding
+  - intent: search_provider
+    entities:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - requested_slot: location
+  - slot_was_set:
+    - location: Lisboa
+  - slot_was_set:
+    - location: Lisboa
+  - slot_was_set:
+    - requested_slot: accessibility_type
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_give_provider_name
+  - action: utter_offerHelp
+  - intent: offensive
+    entities:
+    - negative_qualifier: maus
+  - action: utter_i_fail

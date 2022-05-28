@@ -36,10 +36,6 @@ rules:
   steps:
   - intent: swearing
   - action: utter_swearingChill
-- rule: Are you a bot
-  steps:
-  - intent: offensive
-  - action: utter_offensiveTone
 - rule: search provider form + accessibility + challenge
   condition:
   - active_loop: search_provider_form
@@ -73,4 +69,16 @@ rules:
 - rule: You fail
   steps:
   - intent: you_fail
+  - action: utter_i_fail
+- rule: offensive + swear words
+  steps:
+  - intent: offensive
+    entities:
+    - swear_word: cabrão
+  - action: utter_offensiveTone
+- rule: offensive + negativeQualifier
+  steps:
+  - intent: offensive
+    entities:
+    - negative_qualifier: mau
   - action: utter_i_fail

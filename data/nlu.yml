@@ -26,6 +26,7 @@ nlu:
     - olá Billy
     - Olá, Billy
     - Ei!
+    - Que tal estás?
 - intent: search_provider
   examples: |
     - Gostava de saber de um [hotel](provider)
@@ -77,6 +78,10 @@ nlu:
     - Precisava mesmo de um [hotel](provider), por favor.
     - Sim, adorava encontrar um bom [hotel](provider) para ficar
     - Sim, preciso de um [restaurante](provider), também
+    - Sim, dava jeito saber de um [hotel](provider) porreiro
+    - O que sugeres?
+    - Sim, gostava imenso de uma sugestão de um [hotel](provider)
+    - Sim, sugere-me lá um [hotel](provider), vá!
 - intent: inform
   examples: |
     - Sim, [cadeira de rodas](accessibility_type)
@@ -137,6 +142,18 @@ nlu:
     - Estou a pensar ir de [férias](motive), para a semana
     - Para [Aveiro](location), por favor.
     - Eu precisava mesmo de ir de [férias](motive)
+    - sim, preciso que tenha acesso para [cadeira de rodas](accessibility_type)
+    - Vou de [viagem](motive), na quinta
+    - Sou [vegetariana](accessibility_type)
+    - porque eu consigo ser [chata](personal_trait)
+    - [Museu](provider)
+    - ok. mas vou ao Lentilhas
+    - Olha, estava aqui a pensar em fugir, no próximo fim de semana.
+    - para [Aveiro](location), por favor.
+    - acesso para [cadeira de rodas](accessibility_type), por favor.
+    - Olha, estava mesmo a pensar em [marcar](negative_qualifier) um fim de semana de [descanso](motive).
+    - Pode ser em [Lisboa](location)
+    - acesso para [cadeira de rodas](accessibility_type)
 - intent: thanks
   examples: |
     - Obrigado e até logo.
@@ -168,6 +185,7 @@ nlu:
     - tu és um computador?
     - és um bot?
     - és vivo?
+    - és [mau](negative_qualifier)
 - intent: deny
   examples: |
     - Não
@@ -184,19 +202,31 @@ nlu:
     - oh que caralho :(!
     - foda-se
     - fodasse, e só um resultado?
+    - dás resultados [fracos](negative_qualifier)
 - intent: offensive
   examples: |
     - Vai à merda!
     - Vai-te foder
-    - cabrão de merda
-    - ide para o caralho
-    - és mesmo cona
-    - Conas!
+    - [cabrão](swear_word) de merda
+    - ide para o [caralho](swear_word)
+    - és mesmo [cona](swear_word)
+    - [Conas](swear_word)!
     - Vai à merda
     - Cona
-    - filho da puta
-    - conas de merda
-    - vai para o caralho
+    - [filho da puta](swear_word)
+    - conas de [merda](swear_word)
+    - vai para o [caralho](swear_word)
+    - [Não serves ](negative_qualifier)para nada
+    - Que [porcaria](negative_qualifier) de resposta
+    - funcionas [mal](negative_qualifier)
+    - vai-te [foder](swear_word)
+    - [não funcionas ](negative_qualifier)bem
+    - dás [maus](negative_qualifier) resultados
+    - que [rico bot ](negative_qualifier)me saiste
+    - Vai-te [foder](swear_word)!
+    - [não estejas ](negative_qualifier)sempre à disposição
+    - mas [não é esse ](negative_qualifier)que ele disse
+    - os resultados são [maus](negative_qualifier)
 - intent: affirm
   examples: |
     - Sim
@@ -210,12 +240,32 @@ nlu:
     - Afirmativo
     - sim, sim
     - afirmativo
+    - sim, claro
 - intent: you_fail
   examples: |
     - estás todo lixado, pá
-    - Não sabes fazer nada.
-    - Não serves para nada
-    - Que porcaria de resposta
+    - [Não sabes ](negative_qualifier)fazer nada.
+- intent: request_details
+  examples: |
+    - Que [pratos](comida) têm?
+    - Podes-me dar mais detalhes, por favor?
+    - Que mais me podes dizer?
+    - Sabes-me dizer mais alguma coisa?
+    - Sabes qual é o [horário](time_related)?
+    - Até que [hora](time_related) está aberto?
+    - Funciona ao [fim-de-semana?](time_related)
+    - Esse [restaurante](provider) tem acesso para [cadeira de rodas?](accessibility_type)
+    - E tem rampas de acesso?
+    - Sabes-me dizer se tem informação em [braille](accessibility_type)?
+    - E tem [gelados](comida) de urso polar?
+- intent: request_directions
+  examples: |
+    - Como faço para [chegar](direction_type) lá?
+    - E podes-me indicar o [caminho](direction_type), por favor?
+    - E [como vou ](direction_type)para esse [restaurante](provider)?
+    - [Onde](direction_type) fica isso?
+    - E como [chego](direction_type) aí?
+    - E como posso [chegar](direction_type) a esse [hotel](provider)?
 - synonym: hotel
   examples: |
     - local para domir
