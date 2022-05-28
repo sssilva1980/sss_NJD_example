@@ -30,6 +30,7 @@ entities:
 - comida
 - time_related
 - direction_type
+- acessibility_type
 slots:
   location:
     type: text
@@ -69,6 +70,7 @@ responses:
   utter_anything_else:
   - text: Se puser ajudar em mais alguma coisa, é só dizeres.
   - text: Se for preciso algo mais, diz.
+  - text: Não sei se consigo fazer isto segunda vez, mas se quiseres tentar pedir mais alguma sugestão, força.
   utter_thanks_reply:
   - text: Nada que agradecer. Estou aqui para ajudar.
   - text: Fico contente de ter podido ajudar.
