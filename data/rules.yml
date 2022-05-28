@@ -82,3 +82,25 @@ rules:
     entities:
     - negative_qualifier: mau
   - action: utter_i_fail
+- rule: Request direction
+  steps:
+  - intent: request_directions
+  - action: utter_give_directions
+- rule: request_detail + comida
+  steps:
+  - intent: request_detail
+    entities:
+    - comida: comida
+  - action: utter_give_details_food
+- rule: request_detail + time
+  steps:
+  - intent: request_detail
+    entities:
+    - time_related: horário
+  - action: utter_give_details_time
+- rule: request_detail + accessibility
+  steps:
+  - intent: request_detail
+    entities:
+    - accessibility_type: rampas de acesso
+  - action: utter_give_details_accessibility

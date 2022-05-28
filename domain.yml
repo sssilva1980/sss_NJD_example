@@ -10,6 +10,7 @@ intents:
 - greet
 - inform
 - offensive
+- request_detail
 - request_details
 - request_directions
 - search_provider
@@ -43,6 +44,9 @@ slots:
     type: text
     influence_conversation: false
   requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+  time_related:
     type: unfeaturized
     influence_conversation: false
 responses:
@@ -108,6 +112,15 @@ responses:
   - text: Portanto, o ideal é saires naquela direção virando onde devas.
   - text: Eu ainda não sou capaz de explicar como chegar a lugares. Sou muito desorientado. Mas se pesquisares no Google encontras facilmente.
   - text: Não sei responder, peço desculpa.
+  utter_give_details_time:
+  - text: Essas coisas das horas e dos minutos deixam-me sempre confuso.
+  utter_give_details_food:
+  - text: Ora, eles têm muita variedade. O ideal é ires lá experimentar um pouco de cada coisa.
+  utter_give_details:
+  - text: Desculpa, mas ainda não consigo dar detalhes sobre os diferentes locais.
+  utter_give_details_accessibility:
+  - text: Estava aqui a consultar os registos e confirmo que tem {accessiblity_type}.
+  - text: Sim, o {provider} tem {accessibility_type}.
 actions:
 - search_provider_foro
 - utter_give_directions
