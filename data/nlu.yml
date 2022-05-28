@@ -126,7 +126,7 @@ nlu:
     - Estava mesmo a precisar de ir de [fim-de-semana](motive)
     - sim, acesso para [cadeira de rodas](accessibility_type)
     - Para a semana tenho de sair em [trabalho](motive)
-    - Sim, [rampas de acesso, ](accessibility_type)por favor
+    - Sim, [rampas de acesso](accessibility_type), por favor
     - Olha, amanhã tenho de sair em [trabalho](motive)
     - Amanhã tenho de ir ao [Porto](location) em [trabalho](motive)
     - acesso para [cadeira de rodas](accessibility_type), por favor
@@ -144,7 +144,7 @@ nlu:
     - Quero ir para [Aveiro](location)
     - Apetecia-me mesmo ir de [fim-de-semana](motive)
     - Preciso mesmo de ir [descansar](motive), para a semana.
-    - Quero ir passar uns dias [fora](accessibility_type).
+    - Quero ir [passar uns dias fora](motive).
     - Adorava ir de [fim-de-semana](motive)
     - Gostava de ir para o [Porto](location)
     - Estou a pensar ir de [férias](motive), para a semana
@@ -280,8 +280,8 @@ nlu:
     - Sabes qual é o [horário](time_related)?
     - Até que [hora](time_related) está aberto?
     - Funciona ao [fim-de-semana?](time_related)
-    - Esse [restaurante](provider) tem acesso para [cadeira de rodas?](accessibility_type)
-    - E tem [rampas de acesso?](accessibility_type)
+    - Esse [restaurante](provider) tem acesso para [cadeira de rodas](accessibility_type)?
+    - E tem [rampas de acesso](accessibility_type)?
     - Sabes-me dizer se tem informação em [braille](accessibility_type)?
     - E tem [gelados](comida) de urso polar?
     - E esse [hotel](provider) está aberto ao fim-de-semana?
@@ -290,8 +290,8 @@ nlu:
     - Como é que chego a [Aveiro](location)?
     - Queria algo mais...
     - E que [comida](comida) servem?
-    - E tem acesso para [cadeira de rodas?](accessibility_type)
-    - Então e tem acesso para [cadeira de rodas, ](accessibility_type)também?
+    - E tem acesso para [cadeira de rodas](accessibility_type)?
+    - Então e tem acesso para [cadeira de rodas](accessibility_type), também?
     - E ao menos sabes o [horário](time_related) de funcionamento?
     - Ao menos sabes se tem rampas de acesso?
 - intent: request_directions
