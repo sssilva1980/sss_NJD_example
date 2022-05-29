@@ -92,6 +92,7 @@ nlu:
     - Gostava de saber de um [restaurante](provider)
     - sim, um [restaurante](provider), também
     - Sim, dava jeito saber de um [hotel](provider)
+    - E sabes de algum [restaurante](provider) perto?
 - intent: inform
   examples: |
     - Sim, [cadeira de rodas](accessibility_type)
@@ -184,6 +185,8 @@ nlu:
     - Ora, dava jeito ser para o [Braga](location)
     - Está mesmo tempo bom para umas [férias](motive)
     - sim, acesso para [cadeira-de-rodas](accessibility_type)
+    - Mas consegues dizer se está [aberto](time_related) no [fim-de-semana](motive)?
+    - sim, [casas de banho ](accessibility_type)adaptadas
 - intent: thanks
   examples: |
     - Obrigado e até logo.
@@ -307,6 +310,12 @@ nlu:
     - Ao menos sabes se tem [rampas de acesso?](accessibility_type)
     - E sabes, pelo menos, o [horário](time_related)?
     - E tem informação em [braille](accessibility_type)?
+    - E está [aberto](time_related)?
+    - E tem acesso para [cadeira-de-rodas?](motive)
+    - E o que se [come](comida), lá?
+    - E qual o [horário](time_related) de funcionamento?
+    - E até que [hora](time_related) está [aberto](time_related)?
+    - E funciona ao [fim-de-semana?](time_related)
 - intent: request_directions
   examples: |
     - Como faço para [chegar](direction_type) lá?
@@ -321,6 +330,7 @@ nlu:
     - Diz-me [onde](direction_type) fica o [hotel](provider)
     - e como se [chega](direction_type) lá?
     - E [como chego ](direction_type)ao Lágrimas?
+    - E como chego lá?
 - synonym: hotel
   examples: |
     - local para domir

@@ -102,9 +102,5 @@ rules:
   steps:
   - intent: request_details
     entities:
-    - accessibility_type: rampas de acesso
+    - accessibility_type: cadeira-de-rodas
   - action: utter_give_details_accessibility
-- rule: request_details + nothing specific
-  steps:
-  - intent: request_details
-  - action: utter_give_details

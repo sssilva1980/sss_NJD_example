@@ -594,3 +594,171 @@ stories:
   - action: utter_give_details_accessibility
   - intent: thanks
   - action: utter_thanks_reply
+- story: Story from Conversation ID 42af582f43a84af8a6af2f6694c4f62c
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_onboarding
+  - intent: greet
+  - action: utter_greet
+  - action: utter_onboarding
+  - intent: inform
+    entities:
+    - motive: passear
+  - slot_was_set:
+    - motive: passear
+  - action: utter_getOutIsGood
+  - action: utter_anything_else
+  - intent: search_provider
+    entities:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - requested_slot: location
+  - intent: inform
+    entities:
+    - location: Aveiro
+  - slot_was_set:
+    - location: Aveiro
+  - action: search_provider_form
+  - slot_was_set:
+    - location: Aveiro
+  - slot_was_set:
+    - requested_slot: accessibility_type
+  - intent: inform
+    entities:
+    - accessibility_type: Braille
+  - slot_was_set:
+    - accessibility_type: Braille
+  - action: search_provider_form
+  - slot_was_set:
+    - accessibility_type: Braille
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: request_directions
+    entities:
+    - direction_type: chegar
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - action: utter_give_directions
+  - intent: request_details
+    entities:
+    - time_related: horário
+  - slot_was_set:
+    - time_related: horário
+  - action: utter_give_details_time
+  - intent: request_details
+    entities:
+    - accessibility_type: cadeira de rodas
+  - slot_was_set:
+    - accessibility_type: cadeira de rodas
+  - action: utter_give_details_accessibility
+  - intent: thanks
+  - action: utter_thanks_reply
+- story: hotel + details + restaurant + details
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_onboarding
+  - intent: inform
+    entities:
+    - motive: passear
+  - slot_was_set:
+    - motive: passear
+  - action: utter_getOutIsGood
+  - action: utter_offerHelp
+  - intent: search_provider
+    entities:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - requested_slot: location
+  - intent: inform
+    entities:
+    - location: Águeda
+  - slot_was_set:
+    - location: Águeda
+  - action: search_provider_form
+  - slot_was_set:
+    - location: Águeda
+  - slot_was_set:
+    - requested_slot: accessibility_type
+  - intent: inform
+    entities:
+    - accessibility_type: casas de banho
+  - slot_was_set:
+    - accessibility_type: casas de banho
+  - action: search_provider_form
+  - slot_was_set:
+    - accessibility_type: casas de banho
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: request_directions
+  - action: utter_give_directions
+  - intent: request_details
+    entities:
+    - accessibility_type: cadeira de rodas
+  - slot_was_set:
+    - accessibility_type: cadeira de rodas
+  - action: utter_give_details_accessibility
+  - intent: request_details
+    entities:
+    - time_related: hora
+  - slot_was_set:
+    - time_related: hora
+  - action: utter_give_details_time
+  - intent: search_provider
+    entities:
+    - provider: restaurante
+  - slot_was_set:
+    - provider: restaurante
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: restaurante
+  - slot_was_set:
+    - location: Águeda
+  - slot_was_set:
+    - accessibility_type: cadeira de rodas
+  - slot_was_set:
+    - provider: restaurante
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: request_details
+    entities:
+    - time_related: horário
+  - slot_was_set:
+    - time_related: horário
+  - action: utter_give_details_time
+  - intent: request_details
+    entities:
+    - comida: come
+  - slot_was_set:
+    - comida: come
+  - action: utter_give_details_food
+  - intent: request_directions
+  - action: utter_give_directions
