@@ -102,7 +102,10 @@ nlu:
     - E onde posso [dormir](provider)?
     - E há algum local perto onde [comer](provider)?
     - Preciso de um local para dormir
-    - E que tal se começasse-mos por um [local para dormir?](provider)
+    - E que tal se começasse-mos por um local para [dormir](provider)
+    - Só preciso de um espaço onde [deitar a cabeça](provider)
+    - E onde posso encher a [barriga](provider)
+    - Só falta saber onde consolar o [estômago](provider)
 - intent: inform
   examples: |
     - Sim, [cadeira de rodas](accessibility_type)
@@ -347,16 +350,15 @@ nlu:
     - E como se [chega](direction_type) lá?
 - synonym: hotel
   examples: |
-    - local para domir
-    - local para deitar a cabeça
-    - sítio para descansar
-    - quarto para descansar
     - quarto
     - dormir
     - nanar
     - local para dormir?
+    - deitar a cabeça
+    - descansar
 - synonym: restaurante
   examples: |
-    - beber uma cerveja
     - beber cerveja
     - comer
+    - barriga
+    - estômago
