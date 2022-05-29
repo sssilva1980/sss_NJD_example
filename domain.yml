@@ -31,6 +31,7 @@ entities:
 - time_related
 - direction_type
 - acessibility_type
+- assistant_reference
 slots:
   location:
     type: text

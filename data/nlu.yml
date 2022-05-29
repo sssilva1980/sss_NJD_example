@@ -28,6 +28,7 @@ nlu:
     - Ei!
     - Que tal estás?
     - Boa tarde!
+    - Olá, [Billy](assistant_reference)!
 - intent: search_provider
   examples: |
     - Gostava de saber de um [hotel](provider)
@@ -93,6 +94,13 @@ nlu:
     - sim, um [restaurante](provider), também
     - Sim, dava jeito saber de um [hotel](provider)
     - E sabes de algum [restaurante](provider) perto?
+    - Ok. E para nanar diz aí onde o [hotel](provider) que vou ficar?
+    - Eu quero ir ao [restaurante](provider) que o Samuel vai e sugeriu
+    - Preciso de um sítio para [nanar](provider)
+    - Sugere aí onde arranjo um [quarto](provider)
+    - E onde posso [dormir](provider)?
+    - E há algum local perto onde [comer](provider)?
+    - Preciso de um local para dormir
 - intent: inform
   examples: |
     - Sim, [cadeira de rodas](accessibility_type)
@@ -331,6 +339,7 @@ nlu:
     - e como se [chega](direction_type) lá?
     - E [como chego ](direction_type)ao Lágrimas?
     - E como chego lá?
+    - Como é que [chego](direction_type) a [Aveiro](location)?
 - synonym: hotel
   examples: |
     - local para domir
@@ -338,7 +347,10 @@ nlu:
     - sítio para descansar
     - quarto para descansar
     - quarto
+    - dormir
+    - nanar
 - synonym: restaurante
   examples: |
     - beber uma cerveja
     - beber cerveja
+    - comer
