@@ -75,9 +75,10 @@ responses:
   - text: Sim, sou um assistente que vive dentro de um computador.
   - text: Eu existo apenas dentro de uma máquina. O meu principal objectivo é ajudar-te.
   utter_anything_else:
-  - text: Se puser ajudar em mais alguma coisa, é só dizeres.
+  - text: Se puder ajudar em mais alguma coisa, é só dizeres.
   - text: Se for preciso algo mais, diz.
-  - text: Não sei se consigo fazer isto segunda vez, mas se quiseres tentar pedir mais alguma sugestão, força.
+  - text: Se precisas de mais alguma sugestão, basta perguntar.
+  - text: Mais alguma coisa, pergunta.
   utter_thanks_reply:
   - text: Nada que agradecer. Estou aqui para ajudar.
   - text: Fico contente de ter podido ajudar.
@@ -138,14 +139,20 @@ responses:
   - text: Estava aqui a consultar os registos e confirmo que tem {accessibility_type}.
   - text: Sim, o {provider} tem {accessibility_type}.
   - text: Ora, para esse {provider}, lamento informar que, de momento, {accessibility_type} não está disponível.
+  - text: Ora, {accessibility_type}... Cá está. Confirmo que sim.
   utter_default:
   - text: Ai que eu fiquei aqui meio atrapalhado. Desculpa. Será que podes tentar dizer de maneira diferente?
   - text: Peço desculpa, não faço ideia do que pediste. Será que o consegues dizer de outra maneira?
-  - text: Tive aqui uma paradinha dos sistemas. Podes reformular o pedido, por favor? Se estás a tentar pedir detalhes sobre o {provider}, sê paciente, porque eu ainda estou a aprender.
+  - text: Tive aqui uma paradinha dos sistemas. Estavamos a falar de um {provider}. Podes reformular o pedido, por favor? Se estás a tentar pedir detalhes sobre o {provider}, sê paciente, porque eu ainda estou a aprender.
   - text: Ora, que estamos a falar de um {provider} em {location}, eu sei. Agora, o resto, já me perdi. Podes dizer de outro modo, por favor?
   - text: Vamos fazer de conta que não disseste essa última coisa, porque eu não entendi nada... Talvez dizendo de outro modo?
   utter_one_thing_at_a_time:
   - text: Sugiro que perguntes detalhes sobre apenas uma coisa, de cada vez. Eu ainda não consigo ligar com vários pedidos numa frase.
+  utter_confirmation_processing:
+  - text: A procurar por uma boa sugestão de {provider} para {location}...
+  - text: Deixa cá ver que sugestões de {provider} tenho para {location}. Um momento, por favor.
+  utter_confirmation_accessibility:
+  - text: Estou a considerar apenas as opções com {accessibility_type}.
 actions:
 - search_provider_foro
 - utter_give_directions

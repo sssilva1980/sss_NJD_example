@@ -293,6 +293,7 @@ nlu:
     - Não dizes [nada de jeito](negative_qualifier)
     - mas tu até sabes do que estou a falar mas fazes-te de esqusiito
     - tu não entendes nada
+    - e não consegues fazer [nada de jeito](negative_qualifier)
 - intent: affirm
   examples: |
     - Sim
