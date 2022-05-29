@@ -13,6 +13,7 @@ intents:
 - request_detail
 - request_details
 - request_directions
+- request_help
 - search_provider
 - swearing
 - thanks
@@ -135,6 +136,12 @@ responses:
   utter_give_details_accessibility:
   - text: Estava aqui a consultar os registos e confirmo que tem {accessibility_type}.
   - text: Sim, o {provider} tem {accessibility_type}.
+  utter_default:
+  - text: Ai que eu fiquei aqui meio atrapalhado. Desculpa. Será que podes tentar dizer de maneira diferente?
+  - text: Peço desculpa, não faço ideia do que pediste. Será que o consegues dizer de outra maneira?
+  - text: Tive aqui uma paradinha dos sistemas. Podes reformular o pedido, por favor? Se estás a tentar pedir detalhes sobre o {provider}, sê paciente, porque eu ainda estou a aprender.
+  - text: Ora, que estamos a falar de um {provider} em {location}, eu sei. Agora, o resto, já me perdi. Podes dizer de outro modo, por favor?
+  - text: Vamos fazer de conta que não disseste essa última coisa, porque eu não entendi nada... Talvez dizendo de outro modo?
 actions:
 - search_provider_foro
 - utter_give_directions

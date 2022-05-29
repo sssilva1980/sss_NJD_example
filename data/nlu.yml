@@ -106,6 +106,8 @@ nlu:
     - Só preciso de um espaço onde [deitar a cabeça](provider)
     - E onde posso encher a [barriga](provider)
     - Só falta saber onde consolar o [estômago](provider)
+    - E que tal um local para [comer]{"entity": "provider", "value": "restaurante"}?
+    - Preciso de um bom local para [dormir](provider)
 - intent: inform
   examples: |
     - Sim, [cadeira de rodas](accessibility_type)
@@ -342,20 +344,29 @@ nlu:
     - E sabes dizer-me como posso lá [chegar](direction_type), por favor?
     - E é fácil [chegar](direction_type) lá?
     - e [como se vai ](direction_type)para lá?
-    - Diz-me [onde](direction_type) fica o [hotel](provider)
+    - Diz-me [onde fica ](direction_type)o [hotel](provider)
     - e como se [chega](direction_type) lá?
     - E [como chego ](direction_type)ao Lágrimas?
     - E como chego lá?
     - Como é que [chego](direction_type) a [Aveiro](location)?
     - E como se [chega](direction_type) lá?
+    - Qual é o melhor [caminho](direction_type) para lá?
+- intent: request_help
+  examples: |
+    - Podes-me ajudar?
+    - Não sei como começar
+    - O que é que eu posso pedir?
+    - O que é que és capaz de fazer?
+    - Preciso de ajuda
+    - O que sabes fazer?
 - synonym: hotel
   examples: |
     - quarto
     - dormir
     - nanar
-    - local para dormir?
     - deitar a cabeça
     - descansar
+    - sítio para dormir
 - synonym: restaurante
   examples: |
     - beber cerveja
