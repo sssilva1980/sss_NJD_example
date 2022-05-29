@@ -88,19 +88,19 @@ rules:
   - action: utter_give_directions
 - rule: request_detail + comida
   steps:
-  - intent: request_detail
+  - intent: request_details
     entities:
     - comida: comida
   - action: utter_give_details_food
 - rule: request_detail + time
   steps:
-  - intent: request_detail
+  - intent: request_details
     entities:
     - time_related: horário
   - action: utter_give_details_time
 - rule: request_detail + accessibility
   steps:
-  - intent: request_detail
+  - intent: request_details
     entities:
     - accessibility_type: rampas de acesso
   - action: utter_give_details_accessibility
