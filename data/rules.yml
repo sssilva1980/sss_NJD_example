@@ -30,6 +30,7 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: utter_confirmation_processing
   - action: utter_give_provider_name
   - action: utter_anything_else
 - rule: Swearing
