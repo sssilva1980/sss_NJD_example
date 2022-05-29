@@ -108,6 +108,7 @@ nlu:
     - Só falta saber onde consolar o [estômago](provider)
     - E que tal um local para [comer]{"entity": "provider", "value": "restaurante"}?
     - Preciso de um bom local para [dormir](provider)
+    - E consegues sugerir onde [comer]{"entity": "provider", "value": "restaurante"}?
 - intent: inform
   examples: |
     - Sim, [cadeira de rodas](accessibility_type)
@@ -202,6 +203,7 @@ nlu:
     - sim, acesso para [cadeira-de-rodas](accessibility_type)
     - Mas consegues dizer se está [aberto](time_related) no [fim-de-semana](motive)?
     - sim, [casas de banho ](accessibility_type)adaptadas
+    - E depois queria ir visitar um [museu](provider), pode ser?
 - intent: thanks
   examples: |
     - Obrigado e até logo.
@@ -285,6 +287,7 @@ nlu:
     - hmm, dás [maus](negative_qualifier) resultados
     - estás todo [lixado](negative_qualifier), pá
     - [Não sabes ](negative_qualifier)fazer nada.
+    - Não dizes [nada de jeito](negative_qualifier)
 - intent: affirm
   examples: |
     - Sim
@@ -333,6 +336,9 @@ nlu:
     - E funciona ao [fim-de-semana?](time_related)
     - Mas ao menos sabes se está [aberto](time_related)?
     - Que [pratos](comida) servem?
+    - Tem [vegetariana](accessibility_type)?
+    - E em que [horários](time_related) funciona?
+    - sabes se tem ementa [vegetariana](accessibility_type)?
 - intent: request_directions
   examples: |
     - Como faço para [chegar](direction_type) lá?
@@ -351,6 +357,7 @@ nlu:
     - Como é que [chego](direction_type) a [Aveiro](location)?
     - E como se [chega](direction_type) lá?
     - Qual é o melhor [caminho](direction_type) para lá?
+    - E qual o melhor [caminho](direction_type) para lá?
 - intent: request_help
   examples: |
     - Podes-me ajudar?
@@ -359,6 +366,7 @@ nlu:
     - O que é que és capaz de fazer?
     - Preciso de ajuda
     - O que sabes fazer?
+    - O que sabes tu fazer?
 - synonym: hotel
   examples: |
     - quarto

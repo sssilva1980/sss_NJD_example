@@ -599,9 +599,6 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_onboarding
-  - intent: greet
-  - action: utter_greet
-  - action: utter_onboarding
   - intent: inform
     entities:
     - motive: passear
@@ -762,3 +759,108 @@ stories:
   - action: utter_give_details_food
   - intent: request_directions
   - action: utter_give_directions
+- story: Asking for help
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_onboarding
+  - intent: request_help
+  - action: utter_onboarding
+- story: hotel + directions + restaurant + food details + vegetarian
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_onboarding
+  - intent: request_help
+  - action: utter_onboarding
+  - intent: search_provider
+    entities:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - requested_slot: location
+  - intent: inform
+    entities:
+    - location: Coimbra
+  - slot_was_set:
+    - location: Coimbra
+  - action: search_provider_form
+  - slot_was_set:
+    - location: Coimbra
+  - slot_was_set:
+    - requested_slot: accessibility_type
+  - intent: affirm
+  - action: utter_goOn
+  - action: search_provider_form
+  - slot_was_set:
+    - requested_slot: accessibility_type
+  - intent: inform
+    entities:
+    - accessibility_type: rampas de acesso
+  - slot_was_set:
+    - accessibility_type: rampas de acesso
+  - action: search_provider_form
+  - slot_was_set:
+    - accessibility_type: rampas de acesso
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: request_directions
+    entities:
+    - direction_type: caminho
+  - action: utter_give_directions
+  - intent: request_details
+    entities:
+    - time_related: horários
+  - slot_was_set:
+    - time_related: horários
+  - action: utter_give_details_time
+  - intent: search_provider
+    entities:
+    - provider: restaurante
+  - slot_was_set:
+    - provider: restaurante
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: restaurante
+  - slot_was_set:
+    - location: Coimbra
+  - slot_was_set:
+    - accessibility_type: rampas de acesso
+  - slot_was_set:
+    - provider: restaurante
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: request_details
+    entities:
+    - comida: comida
+  - slot_was_set:
+    - comida: comida
+  - action: utter_give_details_food
+  - intent: request_details
+    entities:
+    - accessibility_type: vegetariana
+  - slot_was_set:
+    - accessibility_type: vegetariana
+  - action: utter_give_details_accessibility
+- story: offensive swaering + negative_qualifier
+  steps:
+  - intent: offensive
+    entities:
+    - swear_word: merda
+  - action: utter_offensiveTone
+  - intent: offensive
+  - action: utter_i_fail
