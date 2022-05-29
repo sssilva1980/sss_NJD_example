@@ -345,6 +345,7 @@ nlu:
     - Tem [vegetariana](accessibility_type)?
     - E em que [horários](time_related) funciona?
     - sabes se tem ementa [vegetariana](accessibility_type)?
+    - Pelo menos sabes se está [aberto](time_related)?
 - intent: request_directions
   examples: |
     - Como faço para [chegar](direction_type) lá?

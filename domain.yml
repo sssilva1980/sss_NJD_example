@@ -155,7 +155,7 @@ responses:
   - text: Estou a considerar apenas as opções com {accessibility_type}.
 actions:
 - search_provider_foro
-- utter_give_directions
+- utter_give_directionssss
 forms:
   search_provider_form:
     required_slots:

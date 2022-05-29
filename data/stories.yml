@@ -825,6 +825,7 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: utter_confirmation_processing
   - action: utter_give_provider_name
   - action: utter_anything_else
   - intent: request_directions
@@ -855,6 +856,7 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: utter_confirmation_processing
   - action: utter_give_provider_name
   - action: utter_anything_else
   - intent: request_details
@@ -968,6 +970,7 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: utter_confirmation_processing
   - action: utter_give_provider_name
   - action: utter_anything_else
   - intent: request_details
@@ -1054,6 +1057,88 @@ stories:
   - intent: request_details
     entities:
     - time_related: horas
+    - time_related: aberto
+  - slot_was_set:
+    - time_related: aberto
+  - action: utter_give_details_time
+  - intent: thanks
+  - action: utter_thanks_reply
+- story: hotel + accessibility + restaurant + directions + details
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_onboarding
+  - intent: inform
+    entities:
+    - motive: fim-de-semana
+  - slot_was_set:
+    - motive: fim-de-semana
+  - action: utter_getOutIsGood
+  - action: utter_offerHelp
+  - intent: search_provider
+    entities:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - requested_slot: location
+  - intent: inform
+    entities:
+    - location: Coimbra
+  - slot_was_set:
+    - location: Coimbra
+  - action: search_provider_form
+  - slot_was_set:
+    - location: Coimbra
+  - slot_was_set:
+    - requested_slot: accessibility_type
+  - intent: inform
+    entities:
+    - accessibility_type: braille
+  - slot_was_set:
+    - accessibility_type: braille
+  - action: search_provider_form
+  - slot_was_set:
+    - accessibility_type: braille
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_confirmation_processing
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: search_provider
+    entities:
+    - provider: restaurante
+  - slot_was_set:
+    - provider: restaurante
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: restaurante
+  - slot_was_set:
+    - location: Coimbra
+  - slot_was_set:
+    - accessibility_type: braille
+  - slot_was_set:
+    - provider: restaurante
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_confirmation_processing
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: request_directions
+    entities:
+    - direction_type: chegar
+  - action: utter_give_directions
+  - intent: request_details
+    entities:
     - time_related: aberto
   - slot_was_set:
     - time_related: aberto
