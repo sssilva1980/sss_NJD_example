@@ -864,3 +864,183 @@ stories:
   - action: utter_offensiveTone
   - intent: offensive
   - action: utter_i_fail
+- story: Two details in one request
+  steps:
+  - intent: request_details
+    entities:
+    - accessibility_type: vegetariana
+    - comida: comida
+  - action: utter_one_thing_at_a_time
+  - intent: request_details
+    entities:
+    - accessibility_type: vegetariana
+  - action: utter_give_details_accessibility
+  - intent: request_details
+    entities:
+    - comida: comida
+  - action: utter_give_details_food
+  - intent: request_details
+    entities:
+    - time_related: horário
+  - action: utter_give_details_time
+- story: hotel + restaurant + details + happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_onboarding
+  - intent: inform
+    entities:
+    - motive: tirar
+    - motive: férias
+  - slot_was_set:
+    - motive: férias
+  - action: utter_getOutIsGood
+  - action: utter_offerHelp
+  - intent: search_provider
+    entities:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - requested_slot: location
+  - slot_was_set:
+    - location: Aveiro
+  - slot_was_set:
+    - location: Aveiro
+  - slot_was_set:
+    - requested_slot: accessibility_type
+  - slot_was_set:
+    - accessibility_type: cadeira de rodas
+  - slot_was_set:
+    - accessibility_type: cadeira de rodas
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: request_directions
+    entities:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - action: utter_give_directions
+  - intent: request_details
+    entities:
+    - time_related: horário
+  - slot_was_set:
+    - time_related: horário
+  - action: utter_give_details_time
+  - intent: search_provider
+    entities:
+    - provider: restaurante
+  - slot_was_set:
+    - provider: restaurante
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: restaurante
+  - slot_was_set:
+    - location: Aveiro
+  - slot_was_set:
+    - accessibility_type: cadeira de rodas
+  - slot_was_set:
+    - provider: restaurante
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: request_details
+    entities:
+    - comida: comida
+  - slot_was_set:
+    - comida: comida
+  - action: utter_give_details_food
+  - intent: request_details
+    entities:
+    - accessibility_type: vegetariana
+  - slot_was_set:
+    - accessibility_type: vegetariana
+  - action: utter_give_details_accessibility
+  - intent: thanks
+  - action: utter_thanks_reply
+- story: challenge + help + hotel + museum + directions + details
+  steps:
+  - intent: are_you_bot
+  - action: utter_i_am_bot
+  - intent: offensive
+  - action: utter_i_fail
+  - intent: request_help
+  - action: utter_onboarding
+  - intent: search_provider
+    entities:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - provider: hotel
+  - slot_was_set:
+    - requested_slot: location
+  - slot_was_set:
+    - location: Coimbra
+  - slot_was_set:
+    - location: Coimbra
+  - slot_was_set:
+    - requested_slot: accessibility_type
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: search_provider
+    entities:
+    - provider: museu
+  - slot_was_set:
+    - provider: museu
+  - action: search_provider_form
+  - active_loop: search_provider_form
+  - slot_was_set:
+    - provider: museu
+  - slot_was_set:
+    - location: Coimbra
+  - slot_was_set:
+    - provider: museu
+  - slot_was_set:
+    - requested_slot: accessibility_type
+  - slot_was_set:
+    - accessibility_type: braille
+  - slot_was_set:
+    - accessibility_type: braille
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_give_provider_name
+  - action: utter_anything_else
+  - intent: request_directions
+    entities:
+    - direction_type: chega
+    - provider: museu
+  - slot_was_set:
+    - provider: museu
+  - action: utter_give_directions
+  - intent: request_details
+    entities:
+    - time_related: horas
+    - time_related: aberto
+  - slot_was_set:
+    - time_related: aberto
+  - action: utter_give_details_time
+  - intent: thanks
+  - action: utter_thanks_reply
