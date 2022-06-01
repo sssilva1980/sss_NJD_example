@@ -133,6 +133,7 @@ responses:
   - text: Está sempre aberto entre as 7h30 e as 23h00... Sim, estou a inventar. Ainda não sei ver esses detalhes.
   utter_give_details_food:
   - text: Ora, eles têm muita variedade. O ideal é ires lá experimentar um pouco de cada coisa.
+  - text: Neste {provider} eles têm muita comida à base de alimentos.
   utter_give_details:
   - text: Desculpa, mas ainda não consigo dar detalhes sobre os diferentes locais.
   utter_give_details_accessibility:
@@ -151,6 +152,9 @@ responses:
   utter_confirmation_processing:
   - text: A procurar por uma boa sugestão de {provider} para {location}...
   - text: Deixa cá ver que sugestões de {provider} tenho para {location}. Um momento, por favor.
+  - text: Vou encontrar um {provider} em {location} num instante!
+  - text: Ora... {location}...{location}... ah, já sei de um excelente {provider}!
+  - text: Portanto, um {provider}, ok! E em {location}. A pesquisar.
   utter_confirmation_accessibility:
   - text: Estou a considerar apenas as opções com {accessibility_type}.
 actions:

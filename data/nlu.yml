@@ -111,6 +111,9 @@ nlu:
     - E consegues sugerir onde [comer]{"entity": "provider", "value": "restaurante"}?
     - Vou precisar, também, de um local para [jantar](provider)
     - Sim, diz-me lá onde [comer]{"entity": "provider", "value": "restaurante"}
+    - Quero um [hotel](provider) em [Almada](location)
+    - [Hoteis](provider)?
+    - E [restaurantes](provider)?
 - intent: inform
   examples: |
     - Sim, [cadeira de rodas](accessibility_type)
@@ -207,6 +210,7 @@ nlu:
     - sim, [casas de banho ](accessibility_type)adaptadas
     - E depois queria ir visitar um [museu](provider), pode ser?
     - Mas isso depende da vida
+    - Uma sugestão de [museu](provider) por favor
 - intent: thanks
   examples: |
     - Obrigado e até logo.
@@ -346,6 +350,7 @@ nlu:
     - E em que [horários](time_related) funciona?
     - sabes se tem ementa [vegetariana](accessibility_type)?
     - Pelo menos sabes se está [aberto](time_related)?
+    - esse [hotel](provider) está aberto até que [horas](time_related)?
 - intent: request_directions
   examples: |
     - Como faço para [chegar](direction_type) lá?
@@ -384,6 +389,8 @@ nlu:
     - deitar a cabeça
     - descansar
     - sítio para dormir
+    - Hoteis
+    - restaurantes
 - synonym: restaurante
   examples: |
     - beber cerveja
